@@ -1,32 +1,31 @@
-import spellchecker
-
-sc = spellchecker.SpellChecker()
+#interfaccia utente - programma
+import correttore
+from dictionary import Dictionary
 
 while(True):
-    sc.printMenu()
-
-    txtIn = input()
-    # Add input control here!
-
-    if int(txtIn) == 1:
-        print("Inserisci la tua frase in Italiano\n")
-        txtIn = input()
-        sc.handleSentence(txtIn,"italian")
-        continue
-
-    if int(txtIn) == 2:
-        print("Inserisci la tua frase in Inglese\n")
-        txtIn = input()
-        sc.handleSentence(txtIn,"english")
-        continue
-
-    if int(txtIn) == 3:
-        print("Inserisci la tua frase in Spagnolo\n")
-        txtIn = input()
-        sc.handleSentence(txtIn,"spanish")
-        continue
-
-    if int(txtIn) == 4:
+    print("______________________________\n" +
+          "      SpellChecker 101\n" +
+          "______________________________\n " +
+          "Seleziona la lingua desiderata\n"
+          "1. Italiano\n" +
+          "2. Inglese\n" +
+          "3. Spagnolo\n" +
+          "4. Exit\n" +
+          "______________________________\n")
+    linguamain = int(input())
+    if linguamain == 1:
+        lingua = "Italian"
+    elif linguamain == 2:
+        lingua = "English"
+    elif linguamain == 3:
+        lingua = "Spanish"
+    else:
+        print("Programma terminato")
         break
+    sc = correttore.SpellChecker()
+    d = Dictionary(lingua)
+    sc.dizionario = d
+    txtIn = input(f"Inserisci la tua frase in {lingua}\n")
+    sc.handleSentence(txtIn)
 
 
