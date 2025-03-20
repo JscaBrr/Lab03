@@ -1,4 +1,4 @@
-#metodi di logica algoritmo di base
+#Controller
 import string
 from multiDictionary import multiDictionary
 
@@ -11,7 +11,7 @@ class SpellChecker:
         listatxt = self.replaceChars(txtIn)
         m = multiDictionary()
         m.dizionario = self.dizionario
-        print(f"-----------metodo Countain-----------")
+        print(f"-----------metodo Contain-----------")
         errors = m.searchWord(listatxt)
         if errors:
             print(f"Parole errate trovate: \n{"\n".join(errors)}")
@@ -23,7 +23,7 @@ class SpellChecker:
             print(f"Parole errate trovate: \n{"\n".join(errors)}")
         else:
             print("Tutte le parole sono corrette.")
-        print(f"-----------metodo Dicotomic-----------")
+        print(f"-----------metodo Dichotomic-----------")
         errors = m.searchWordDichotomic(listatxt)
         if errors:
             print(f"Parole errate trovate: \n{"\n".join(errors)}")

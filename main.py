@@ -1,4 +1,3 @@
-#interfaccia utente - programma
 import correttore
 from dictionary import Dictionary
 

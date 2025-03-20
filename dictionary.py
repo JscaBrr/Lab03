@@ -1,4 +1,4 @@
-#metodi gestione dati dizionario
+#--> attributo del Model
 
 class Dictionary:
     def __init__(self, lingua):

@@ -1,4 +1,4 @@
-#metodi di logica dizionario
+#Model
 import datetime
 import richWord
 
